@@ -1,91 +1,146 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: none;
-    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    background: url("./imgs/background.png");
+    background: url('./imgs/background.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-
 
 header {
-    background-color: #F9A822;
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    
-    & b {
-        font-family: "Kufam", serif;
-        font-size: 35px;
-        margin-left: 10%;
-    }
-  }
+    background-color: #F9A822;
+    padding: 10px 0;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: #080808;
+}
 
 #findCEP {
-    width: 775px;
-    height: 410px;
-    background-color: #eddec1;
-    position: absolute;    
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #f9f0e6;
+    border: 25px solid transparent;
+    max-width: 500px;
+    position: relative;
+    border-image: linear-gradient(45deg, #e94d4d 33%, #fff 33%, #fff 66%, #357edd 66%);
 }
 
-#findCEP > .container1 {
-    padding: 20px 0px 20px 30px;
+#findCEP h1 {
+    font-family: 'Kay Pho Du', serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #3b1d1d;
 }
 
-#findCEP > .container1 h1 {
-    font-family: "Kay Pho Du", serif;
-    margin: 10px 0px 17px 0px;
-
+.container1, .container2 {
+    padding: 20px;
+    width: 300px;
 }
 
-#findCEP > .container1 > label{
-    font: "Inter", serif;
-    
+.form-group {
+    margin-bottom: 15px;
 }
 
-#findCEP > .container1 > form {
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #3b1d1d;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+button#enviarFormFindCep {
+    background-color: #357edd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 10px;
+    width: 390px;
+}
+
+button#enviarFormFindCep:hover {
+    background-color: #2A57A6;
+}
+
+#cepResult {
     display: flex;
-    flex-direction: column;
-    gap: 7px;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3b1d1d;
+}
 
-    & .form-group{
-        display: flex;
-        flex-direction: column;
-        font: medium;
+#cepResult label {
+    margin-right: 10px;
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+    color: #357edd;
+}
+
+.material-symbols-outlined:hover {
+    color: #285bb5;
+}
+
+#findCEP a {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #357edd;
+    text-decoration: none;
+    text-align: right;
+}
+
+#findCEP a:hover {
+    text-decoration: underline;
+}
+
+
+.imgContainer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: auto;
+}
+
+.imgContainer img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    #findCEP {
+        padding: 20px;
+    }
+
+    header {
         font-size: 20px;
-
-        & input {
-            max-width: 200px;
-            padding: 10px;
-        }
     }
 }
-
-#findCEP > .container1 > form > button {
-    width: 140px;
-    border: none;
-    background-color: #2A57A6;
-    font-size: 20px;
-    color: white;
-    border-radius: 6px;
-    padding: 7px;
-    margin-left: 27px;
-}
-
-input {
-    border: none;
-    border-radius: 6px;
-}
-
-
-/* #findCEP > .container2{
-    background-color: white;
-} */
