@@ -36,8 +36,14 @@ header {
     flex-direction: row;
 }
 
+#findCEP > .container1 {
+    padding: 20px 0px 20px 30px;
+}
+
 #findCEP > .container1 h1 {
     font-family: "Kay Pho Du", serif;
+    margin: 10px 0px 17px 0px;
+
 }
 
 #findCEP > .container1 > label{
@@ -71,6 +77,7 @@ header {
     color: white;
     border-radius: 6px;
     padding: 7px;
+    margin-left: 27px;
 }
 
 input {
